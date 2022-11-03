@@ -1,35 +1,38 @@
-<mxfile host="app.diagrams.net" modified="2022-11-03T02:52:47.064Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="QYp0qN3OnsyOXCCmLSjm" version="20.5.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-11-03T02:54:40.774Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="OcGP8dN9GYCZGLfHC-I1" version="20.5.1" type="github" pages="2">
   <diagram id="0vzp7WWWNa5fnZnYjc-W" name="第 1 页">
-    <mxGraphModel dx="1221" dy="688" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="JfxYv5Btw3v5KuXTqHrb-6" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;教材管理系统&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="JfxYv5Btw3v5KuXTqHrb-6" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;教材管理系统&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="230" y="390" width="420" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="JfxYv5Btw3v5KuXTqHrb-7" value="学生" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="1">
-          <mxGeometry x="490" y="210" width="120" height="60" as="geometry" />
+        <mxCell id="JfxYv5Btw3v5KuXTqHrb-7" value="学生" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="200" y="150" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="JfxYv5Btw3v5KuXTqHrb-8" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;exitX=0.321;exitY=1.029;exitDx=0;exitDy=0;entryX=0.346;entryY=0.019;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="JfxYv5Btw3v5KuXTqHrb-7" target="JfxYv5Btw3v5KuXTqHrb-6">
+        <mxCell id="JfxYv5Btw3v5KuXTqHrb-8" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;exitX=0.321;exitY=1.029;exitDx=0;exitDy=0;entryX=0.346;entryY=0.019;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="1" source="JfxYv5Btw3v5KuXTqHrb-7" target="JfxYv5Btw3v5KuXTqHrb-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="600" y="520" as="sourcePoint" />
             <mxPoint x="650" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JfxYv5Btw3v5KuXTqHrb-9" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;教材订购意愿&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;" vertex="1" parent="1">
+        <mxCell id="JfxYv5Btw3v5KuXTqHrb-9" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;教材订购意愿&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;" parent="1" vertex="1">
           <mxGeometry x="390" y="300" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="JfxYv5Btw3v5KuXTqHrb-10" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;exitX=0.424;exitY=0.002;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.58;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="JfxYv5Btw3v5KuXTqHrb-6" target="JfxYv5Btw3v5KuXTqHrb-7">
+        <mxCell id="JfxYv5Btw3v5KuXTqHrb-10" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;exitX=0.424;exitY=0.002;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.58;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="JfxYv5Btw3v5KuXTqHrb-6" target="JfxYv5Btw3v5KuXTqHrb-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="600" y="520" as="sourcePoint" />
             <mxPoint x="538" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JfxYv5Btw3v5KuXTqHrb-11" value="教材信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="JfxYv5Btw3v5KuXTqHrb-11" value="教材信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="525" y="305" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FSQZs6_akRhokArZH-Iy-1" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="FSQZs6_akRhokArZH-Iy-1" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="710" y="410" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zLeD9VXTRXL7F3wjzfQ_-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="130" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -39,10 +42,10 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="d5KELuAqfocpJkqIGLVg-1" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="d5KELuAqfocpJkqIGLVg-1" value="" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="500" y="280" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="d5KELuAqfocpJkqIGLVg-2" value="" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="d5KELuAqfocpJkqIGLVg-2" value="" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="270" y="170" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
