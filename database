@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-06T02:58:36.967Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="d5Own6OwugOwshIx0LFJ" version="20.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-06T03:00:54.672Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="y0L4t7XxricuI6-8dTG1" version="20.5.2" type="github">
   <diagram id="kyWHLpQ6QzqiAM5da3-A" name="第 1 页">
-    <mxGraphModel dx="1384" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+    <mxGraphModel dx="1490" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -676,10 +676,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="w1p1Ua3jznjlfSCURdAS-216" value="合格的入库单" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="570" y="1429.84" width="100" height="30" as="geometry" />
+          <mxGeometry x="510" y="1410" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="w1p1Ua3jznjlfSCURdAS-217" value="" style="group;fontSize=13;" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="580" y="1380" width="92" height="30" as="geometry" />
+          <mxGeometry x="494" y="1350" width="92" height="30" as="geometry" />
         </mxCell>
         <mxCell id="w1p1Ua3jznjlfSCURdAS-218" value="" style="endArrow=none;html=1;rounded=0;fontSize=13;" edge="1" parent="w1p1Ua3jznjlfSCURdAS-217">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
