@@ -1,0 +1,12 @@
+insert into 班级课程表
+values ('201901', '186');
+insert into 班级课程表
+values ('201901', '187');
+insert into 班级课程表
+values ('201901', '189');
+insert into 班级课程表
+values ('201901', '190');
+insert into 班级课程表
+values ('201901', '191');
+insert into 班级课程表
+values ('201901', '193');

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/sql/学院出版社数据.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/sql/建表.sql" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/sql/教材数据.sql" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/sql/课程教材数据.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/sql/0.建表.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/sql/1.学院出版社供应商数据.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/2.教材数据.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/sql/4.课程教材数据.sql" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/sql/视图.sql" dialect="GenericSQL" />
   </component>
 </project>
