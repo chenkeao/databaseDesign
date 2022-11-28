@@ -102,3 +102,22 @@ from 教材领取表 a
          left join 教材 b on a.教材编号 = b.教材编号
          left join 班级 c on a.班级编号 = c.班级编号;
 
+
+create or replace view 教材评价清单 as
+select a.学号,
+       a.教材编号,
+       c.姓名,
+       b.名称,
+       b.ISBN,
+       b.作者,
+       a.评分,
+       a.评语
+from 教材评价表 a
+         left join 教材 b on a.教材编号 = b.教材编号
+         left join 学生 c on a.学号 = c.学号;
+
+create or replace view 教材平均评分 as
+select a.名称, avg(a.评分) as 平均分
+from 教材评价清单 a
+group by a.教材编号
+
