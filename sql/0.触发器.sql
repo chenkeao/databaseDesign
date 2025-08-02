@@ -40,23 +40,45 @@ $$
 delimiter ;
 
 delimiter $$
-create or replace trigger 教材入库
-    after insert
+create or replace trigger 删除教材入库
+    after delete
     on 教材入库表
     for each row
 begin
-    update 教材 set 教材.数量 = 教材.数量 + new.数量 where 教材.教材编号 = new.教材编号;
+    update 教材 set 数量 = 数量 - old.数量 where 教材编号 = old.教材编号;
 end
 $$
 delimiter ;
 
 delimiter $$
-create or replace trigger 教材出库
+create or replace trigger 删除教材出库
+    after delete
+    on 教材出库表
+    for each row
+begin
+    update 教材 set 数量 = 数量 + old.数量 where 教材编号 = old.教材编号;
+end
+$$
+delimiter ;
+
+delimiter $$
+create or replace trigger 新增教材入库
+    after insert
+    on 教材入库表
+    for each row
+begin
+    update 教材 set 数量 = 数量 + new.数量 where 教材编号 = new.教材编号;
+end
+$$
+delimiter ;
+
+delimiter $$
+create or replace trigger 新增教材出库
     after insert
     on 教材出库表
     for each row
 begin
-    update 教材 set 教材.数量 = 教材.数量 - new.数量 where 教材.教材编号 = new.教材编号;
+    update 教材 set 数量 = 数量 - new.数量 where 教材编号 = new.教材编号;
 end
 $$
 delimiter ;
@@ -94,3 +116,5 @@ begin
     end if;
 end $$
 delimiter ;
+
+

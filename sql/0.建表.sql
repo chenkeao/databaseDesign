@@ -28,7 +28,7 @@ create table 学生
     学号     char(12),
     姓名     nvarchar(100),
     性别     tinyint(1)   not null, -- 1: male, 0:female
-    出生日期 date         not null,
+    出生日期 date,
     班级编号 char(12)     not null,
     专业     varchar(100) not null,
     状态     tinyint(1)   not null, -- 1: able, 0: disable
@@ -94,6 +94,7 @@ create table 订购单
     订购单编号 char(12),
     管理员工号 char(12),
     金额       decimal(10, 2),
+    数量       int default 0,
     时间       datetime,
     状态       tinyint(1),
     primary key (订购单编号),
@@ -106,7 +107,7 @@ create table 入库单
     入库单编号 char(12),
     订购单编号 char(12),
     管理员工号 char(12),
-    数量       decimal(10, 2),
+    数量       int default 0,
     时间       datetime,
     状态       tinyint(1),
     primary key (入库单编号),
@@ -119,7 +120,7 @@ create table 出库单
 (
     出库单编号 char(12),
     管理员工号 char(12),
-    数量       decimal(10, 2),
+    数量       int default 0,
     时间       datetime,
     状态       tinyint(1),
     primary key (出库单编号),
@@ -161,6 +162,7 @@ create table 教材预购表
 (
     学号     char(12) not null,
     教材编号 char(12) not null,
+    日期    date default now(),
     primary key (学号, 教材编号),
     foreign key (学号) references 学生 (学号),
     foreign key (教材编号) references 教材 (教材编号)
@@ -205,7 +207,6 @@ create table 教材入库表
     primary key (入库单编号, 教材编号),
     foreign key (教材编号) references 教材 (教材编号),
     foreign key (入库单编号) references 入库单 (入库单编号)
-
 );
 
 drop table if exists 教材出库表;

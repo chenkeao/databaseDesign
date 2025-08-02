@@ -10,7 +10,7 @@ select f.班级编号,
        a.ISBN,
        a.价格
 from 教材 a
-         inner join 出版社 b on a.出版社编号 = b.出版社编号
+         left join 出版社 b on a.出版社编号 = b.出版社编号
          inner join 课程教材表 c on c.教材编号 = a.教材编号
          inner join 课程 d on c.课程编号 = d.课程编号
          inner join 班级课程表 e on d.课程编号 = e.课程编号
@@ -34,13 +34,6 @@ select 学号, 姓名, SUM(价格) as 总价格
 from 学生需预购教材清单
 group by 学号, 姓名;
 
--- 学生预购教材清单
-create or replace view 学生预购教材清单 as
-select b.教材编号, b.名称, count(a.学号) as 数量
-from 教材预购表 a
-         left join 教材 b on a.教材编号 = b.教材编号
-group by a.教材编号;
-
 create or replace view 班级预购教材清单 as
 select a.教材编号, c.班级编号, c.班级名称, d.名称, count(a.教材编号) as 预购数量, d.ISBN
 from 教材预购表 a
@@ -49,16 +42,10 @@ from 教材预购表 a
          left join 教材 d on a.教材编号 = d.教材编号
 group by c.班级编号, a.教材编号;
 
-create or replace view 需订购教材清单 as
-select a.教材编号, b.名称 as 教材名称, a.数量 - b.数量 as 需订购数量, c.名称 as 出版社名称, b.ISBN, b.作者
-from 学生预购教材清单 a
-         left join 教材 b on a.教材编号 = b.教材编号
-         left join 出版社 c on b.出版社编号 = c.出版社编号
-where a.数量 > b.数量;
 
 create or replace view 教材供应清单 as
-select a.教材编号, a.教材名称, c.名称, c.地址, c.联系电话, b.售价
-from 需订购教材清单 a
+select a.教材编号, a.名称 as 教材名称, c.名称 as 供应商名称, c.地址, c.联系电话, b.售价
+from 教材 a
          left join 教材供应表 b on a.教材编号 = b.教材编号
          left join 供应商 c on b.供应商编号 = c.供应商编号;
 
@@ -70,10 +57,6 @@ from 教材订购表 a
 where a.状态 = 0
 group by a.订购单编号, a.教材编号;
 
-insert into 入库单 (入库单编号, 订购单编号, 管理员工号, 数量, 时间, 状态)
-values ('000000000001', '000000000001', '1', NULL, default, 0);
-insert into 教材入库表 (教材编号, 入库单编号, 数量)
-values ('189', '000000000001', 2);
 
 create or replace view 待入库教材清单 as
 select e.教材编号,
@@ -89,12 +72,6 @@ from 订购单 a
          left join 教材 e on b.教材编号 = e.教材编号
 where a.状态 = 0
 group by b.教材编号;
-
-create or replace view 待领取教材清单 as
-select a.名称, a.预购数量, ifnull(b.数量, 0) as 已领数量, a.预购数量 - ifnull(b.数量, 0) as 待领数量
-from 班级预购教材清单 a
-         left join 教材领取表 b on a.教材编号 = b.教材编号 and a.班级编号 = b.班级编号
-where a.预购数量 > ifnull(b.数量, 0);
 
 create or replace view 教材领取清单 as
 select c.班级名称, b.名称, a.数量, a.时间
@@ -116,8 +93,28 @@ from 教材评价表 a
          left join 教材 b on a.教材编号 = b.教材编号
          left join 学生 c on a.学号 = c.学号;
 
-create or replace view 教材平均评分 as
-select a.名称, avg(a.评分) as 平均分
-from 教材评价清单 a
-group by a.教材编号
+
+delimiter $$
+create or replace procedure 教材预购清单(in 预购日期 date)
+begin
+    select b.教材编号, b.名称, count(a.学号) as 数量
+    from 教材预购表 a
+             left join 教材 b on a.教材编号 = b.教材编号
+    where a.日期 >= 预购日期
+    group by a.教材编号;
+end $$
+delimiter ;
+
+delimiter $$
+create or replace procedure 需订购教材清单(in 预购日期 date)
+begin
+    select b.数量                                                                  as 库存数量,
+           count(a.教材编号)                                                       as 预购数量,
+           IF(count(a.教材编号) >= b.数量, count(a.教材编号) - b.数量, '无需订购') as 需订购数量
+    from 教材预购表 a
+             left join 教材 b on a.教材编号 = b.教材编号 and a.日期 >= 预购日期
+    group by a.教材编号;
+end $$
+delimiter ;
+
 
